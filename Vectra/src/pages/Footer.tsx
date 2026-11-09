@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import Home from "./Home";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-    const navigate = useNavigate();
     return (
         <div style={{
             display: "flex",
@@ -27,11 +25,10 @@ export default function Footer() {
                 gap: "0.5rem",
             }}>
                 <p>Quick Links</p>
-                <span onClick={() => navigate("/")}
-                >Home</span>
-                <span>About</span>
-                <span>Services</span>
-                <span>Contact</span>
+                <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>Home</Link>
+                <Link to="/About" style={{ color: "inherit", textDecoration: "none" }}>About</Link>
+                <Link to="/Services" style={{ color: "inherit", textDecoration: "none" }}>Services</Link>
+                <Link to="/Contact" style={{ color: "inherit", textDecoration: "none" }}>Contact</Link>
             </span>
             <span>
                 <p>Services</p>
@@ -48,6 +45,9 @@ export default function Footer() {
                 
             </span>
             <div style={{width: "99%", height: "1px", background: "#ffff", alignSelf: "center", justifySelf: "center"}}></div>
+            <span style={{ textAlign: "center", justifyContent: "center", alignItems: "center"}}>
+                <p>© 2026 Vectra Tech. All rights reserved.</p>
+            </span>
         </div>
     );
 }

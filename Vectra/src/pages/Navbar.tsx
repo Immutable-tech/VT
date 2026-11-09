@@ -1,10 +1,15 @@
 import Logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
         <nav className=" top-0 z-50 bg-white shadow-md" style={{ left: 0, width: "100%" }}>
             <div className="flex items-center justify-between h-8 px-4">
-                 <div><img style={{ height: "5rem", width: "5rem" }} src={Logo} alt="Logo" /></div>
+                 <div>
+                    <Link to="/" aria-label="Vectra Tech home">
+                        <img style={{ height: "5rem", width: "5rem" }} src={Logo} alt="Logo" />
+                    </Link>
+                 </div>
             <div style={{
                 display: "flex",
                 flexDirection: "row",
@@ -17,15 +22,15 @@ export default function Navbar() {
                 
             }}>
 
-                <span>Home</span>
+                <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>Home</Link>
 
-                <span>About</span>
+                <Link to="/About" style={{ color: "inherit", textDecoration: "none" }}>About</Link>
 
-                <span>Chatbot</span>
+                <Link to="/Chatbot" style={{ color: "inherit", textDecoration: "none" }}>Chatbot</Link>
 
-                <span>Contact</span>
+                <Link to="/Contact" style={{ color: "inherit", textDecoration: "none" }}>Contact</Link>
 
-                <span>Services</span>
+                <Link to="/Services" style={{ color: "inherit", textDecoration: "none" }}>Services</Link>
 
             </div>
             </div>

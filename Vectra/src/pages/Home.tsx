@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar />
      <div>
       <div style={{
-        marginTop: "3rem",
+        marginTop: "1rem",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
