@@ -1,20 +1,33 @@
-import { Link } from "react-router-dom";
+import Logo from "../assets/Logo.svg";
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 z-50 bg-white shadow-md">
-            <div className="flex h-16 items-center justify-end gap-8 px-8 text-black">
+        <nav className=" top-0 z-50 bg-white shadow-md" style={{ left: 0, width: "100%" }}>
+            <div className="flex items-center justify-between h-8 px-4">
+                 <div><img style={{ height: "5rem", width: "5rem" }} src={Logo} alt="Logo" /></div>
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "1rem",
+                padding: "2rem",
+                justifyContent: "flex-end",
+                alignItems: "center",
+                width: "90%",
+                marginRight: "2rem"
+                
+            }}>
 
-                <Link to="/">Home</Link>
+                <span>Home</span>
 
-                <Link to="/about">About</Link>
+                <span>About</span>
 
-                <Link to="/chatbot">Chatbot</Link>
+                <span>Chatbot</span>
 
-                <Link to="/contact">Contact</Link>
+                <span>Contact</span>
 
-                <Link to="/services">Services</Link>
+                <span>Services</span>
 
+            </div>
             </div>
         </nav>
     );

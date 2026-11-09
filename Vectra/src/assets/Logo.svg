@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .logo-fill {
+        fill: #000000;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Artboard -->
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+
+  <!-- Logo Vector Paths -->
+  <g class="logo-fill">
+    <!-- Right Wing / Side Element -->
+    <path d="M 629,226 L 509,226 L 453,317 L 508,402 Z" />
+    
+    <!-- Left Wing / Side Element -->
+    <path d="M 168,205 L 233,205 L 283,278 L 249,324 Z" />
+
+    <!-- Central Intertwined Monogram -->
+    <path d="M 386,42 L 272,196 L 403,389 L 382,422 L 295,294 L 260,339 L 402,546 L 495,408 L 350,194 L 380,154 L 445,254 L 483,192 Z" />
+  </g>
+</svg>
