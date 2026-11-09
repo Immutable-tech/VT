@@ -11,7 +11,7 @@ import GraphicDesign from "../assets/GrapgicDesign.jpg";
 import POS from "../assets/POS.jpg";
 import BackendDevelopment from "../assets/BackendDevelopment.jpg";
 import { FaCheckCircle } from "react-icons/fa";
-import { FileX } from "lucide-react";
+import Footer from "./Footer";
 
 
 
@@ -512,9 +512,19 @@ export default function Home() {
         }}>Built on Trust. Driven by Excellence. </p>
         <span style={{
           display: "flex",
-          flexDirection: "row"
+          flexDirection: "row",
+          gap: "2rem",
+          justifyContent: "space-around",
+          padding: "2rem",
         }}>
-          <span>
+          <span style={{
+            display: "flex",
+            flexDirection: "column",
+            borderLeft: "2px solid #d40f0f",
+          paddingLeft: "1rem",
+          borderRadius: "5px",
+          background: "#272424"
+          }}>
             <p style={{
           alignSelf: "center",
           textAlign: "center",
@@ -523,11 +533,19 @@ export default function Home() {
           marginTop: "2rem",
           marginBottom: "2rem",
           color: "#fff",
-          width: "14rem"
+          width: "14rem",
+          
         }}>Fast Delivery</p>
             <p style={{color: "#fff"}}>Clear milestones and quick turnaround so you launch sooner.</p>
             </span>
-          <span>
+          <span style={{
+            display: "flex",
+            flexDirection: "column",
+            borderLeft: "2px solid #d40f0f",
+          paddingLeft: "1rem",
+          borderRadius: "5px",
+          background: "#272424"
+          }}>
             <p style={{
           alignSelf: "center",
           textAlign: "center",
@@ -540,7 +558,14 @@ export default function Home() {
         }}>Mobile fast</p>
             <p style={{color: "#fff"}}>Every build works smoothly on the phones your customers use.</p>
             </span>
-          <span>
+          <span style={{
+            display: "flex",
+            flexDirection: "column",
+            borderLeft: "2px solid #d40f0f",
+          paddingLeft: "1rem",
+          borderRadius: "5px",
+          background: "#272424"
+          }}>
             <p style={{
           alignSelf: "center",
           textAlign: "center",
@@ -553,7 +578,15 @@ export default function Home() {
         }}>Fair Pricing</p>
             <p style={{color: "#fff"}}>Transparent quotes with no hidden costs.</p>
             </span>
-          <span>
+          <span style={{
+            display: "flex",
+            flexDirection: "column",
+            borderLeft: "2px solid #d40f0f",
+          paddingLeft: "1rem",
+          borderRadius: "5px", 
+          background: "#272424"
+          
+          }}>
             <p style={{
           alignSelf: "center",
           textAlign: "center",
@@ -568,6 +601,60 @@ export default function Home() {
             </span>
         </span>
         </div>
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${Backgroundimg})`,
+          padding: "2rem",
+          backgroundSize: "cover",
+        }}>
+          <p style={{
+          alignSelf: "center",
+          textAlign: "center",
+          fontWeight:"bold",
+          fontSize: 35,
+          marginTop: "2rem",
+          marginBottom: "2rem",
+          color: "#fff",
+        }}>Want Your Project Here?</p>
+          <p style={{
+          alignSelf: "center",
+          textAlign: "center",
+          fontSize: 20,
+          marginTop: "2rem",
+          marginBottom: "2rem",
+          color: "#fff",
+        }}>Lets Build Your next Project!</p>
+          <span>
+            <button
+            style={{
+              background: "#d40f0f",
+              height: 50 ,
+              width: 200,
+              marginRight: 10,
+              borderRadius: 5,
+              color: "#fff",
+              padding: 10,
+              border: "none",
+            }}>Chat On WhatsApp</button>
+            <button
+            style={{
+              background: "transparent",
+              height: 50 ,
+              width: 200,
+              marginRight: 10,
+              borderRadius: 5,
+              color: "#fff",
+              padding: 10,
+              border: "white 1px solid",
+
+            }}
+            >Email Us</button>
+          </span>
+        </div>
+        <Footer />
     </div>
   )
 }
