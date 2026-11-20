@@ -17,6 +17,7 @@ export default function App() {
       <Route path="/Services" element={<Services />} />
       <Route path="/Adminpanel" element={<Adminpanel />} />
       <Route path="/Chatbot" element={<Chatbot />} />
+      <Route path="/adminpanel" element={<Adminpanel />} />
     </Routes>
     </BrowserRouter>
   )
