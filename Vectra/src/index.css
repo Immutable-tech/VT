@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
-.service-grid > span {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+@theme {
+  --color-vectra: #c8272f;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
-.service-grid > span:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { margin: 0; min-width: 360px; background: #fff; color: #171717; font-family: var(--font-sans); }
+  button, input, textarea, select { font: inherit; }
+  a { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: #f5c7ca; }
 }

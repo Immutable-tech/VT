@@ -1,129 +1,21 @@
+import { Link } from "react-router-dom";
+import { ArrowRight, Eye, HeartHandshake, Lightbulb, MoveUpRight, ShieldCheck, Target, Users } from "lucide-react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Background from "../assets/Backgroundimg.jpg";
 
-import { MdOutlineArrowRightAlt } from "react-icons/md";
-import { GoRocket, GoPeople } from "react-icons/go";
-import { IoEyeOutline } from "react-icons/io5";
+const values = [
+  {icon: Target, title: "Our mission", text: "Make useful technology accessible to the businesses and communities it can help."},
+  {icon: Eye, title: "Our vision", text: "A future where local businesses can grow confidently in a digital world."},
+  {icon: HeartHandshake, title: "Our values", text: "Integrity, collaboration and care guide the way we work with every client."},
+];
+const principles = [[Lightbulb,"Listen first"],[Users,"Work together"],[ShieldCheck,"Build responsibly"],[HeartHandshake,"Support the launch"]] as const;
 
 export default function About() {
-  const aboutUs = [
-    {
-      icon: <GoRocket />,
-      title: "Our Mission",
-      description:
-        "To deliver innovative and accessible technology solutions that empower people and transform lives.",
-    },
-    {
-      icon: <IoEyeOutline />,
-      title: "Our Vision",
-      description:
-        "To be a leading tech company known for excellence, innovation and positive impact.",
-    },
-    {
-      icon: <GoPeople />,
-      title: "Our Values",
-      description:
-        "Integrity, collaboration, and a commitment to excellence are at the core of everything we do.",
-    },
-  ];
-
-  return (
-    <section className="bg-white">
-
-      
-      <div className="flex flex-col md:flex-row items-center gap-10 px-6 md:px-12 py-12">
-
-        
-        <div className="w-full md:w-1/2">
-
-          <p className="text-red-600 font-semibold text-lg mb-3">
-            ━━ About Us
-          </p>
-
-          <div className="text-black font-bold text-4xl md:text-5xl mb-5">
-            <h3>Building a Smarter</h3>
-            <h3>
-              Digital <span className="text-red-600">Future</span>
-            </h3>
-          </div>
-
-          <div className="text-gray-700 text-base leading-relaxed mb-6">
-            <p className="mb-4">
-              At Vectra we are passionate about technology and innovation.
-              We create modern, reliable and user-friendly solutions that
-              help individuals, businesses and communities grow in the
-              digital world.
-            </p>
-
-            <p>
-              Our team of skilled developers, designers and innovators work
-              together to turn ideas into impactful solutions.
-            </p>
-          </div>
-
-          <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 font-semibold">
-            Learn More
-            <MdOutlineArrowRightAlt size={22} />
-          </button>
-
-        </div>
-
-        {/* About Image */}
-        <div className="w-full md:w-1/2 relative h-75 md:h-100">
-
-          <div className="absolute -top-3 -right-2.5 w-[95%] h-full bg-red-600 rounded-3xl -rotate-3"></div>
-
-          <img
-            src="/image1.png"
-            alt="Vectra workspace"
-            className="relative z-10 w-full h-full object-cover rounded-2xl"
-          />
-
-        </div>
-
-      </div>
-
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-6 md:px-12 py-6">
-
-        {aboutUs.map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-5 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition"
-          >
-
-            <div className="bg-red-600 text-white rounded-full min-w-20 h-20 flex items-center justify-center text-4xl">
-              {item.icon}
-            </div>
-
-            <div>
-              <h4 className="text-black font-bold text-xl mb-2">
-                {item.title}
-              </h4>
-
-              <p className="text-gray-700 text-sm ">
-                {item.description}
-              </p>
-            </div>
-
-          </div>
-        ))}
-
-      </div>
-
-      
-      <div className="bg-[#0A0A0A] text-white px-6 md:px-12 py-10 mt-5 flex flex-col md:flex-row items-center justify-center gap-8">
-
-        <h4 className="text-2xl md:text-3xl font-bold text-center">
-          Together, let's build a better digital
-          <span className="text-red-600"> tomorrow.</span>
-        </h4>
-
-        <button className="border-2 border-white hover:bg-red-600 hover:border-red-600 px-7 py-3 rounded-full flex items-center gap-2 font-semibold whitespace-nowrap">
-          Contact Us
-          <MdOutlineArrowRightAlt size={22} />
-        </button>
-
-      </div>
-
-    </section>
-  );
+  return <><Navbar/><main>
+    <section className="overflow-hidden bg-white"><div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-2 lg:gap-20"><div><span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[.18em] text-vectra"><span className="h-px w-8 bg-vectra"/> ABOUT VECTRA</span><h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Building a smarter <span className="text-vectra">digital future.</span></h1><p className="mt-6 text-base leading-8 text-neutral-600">At Vectra, we believe technology should make work simpler and opportunity more accessible. We create modern, reliable digital products that help Kenyan businesses serve their customers and grow.</p><p className="mt-4 text-base leading-8 text-neutral-600">We bring design, engineering and practical business thinking together to turn ideas into tools people can use every day.</p><Link to="/Services" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-vectra px-6 py-3.5 font-semibold text-white transition hover:bg-rose-700">Explore what we do <ArrowRight size={18}/></Link></div><div className="relative mx-auto w-full max-w-xl"><div className="absolute -inset-3 rotate-3 rounded-3xl bg-rose-100"/><img src="/image1.png" alt="Vectra team workspace" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-xl"/><div className="absolute -bottom-5 -left-3 rounded-xl bg-neutral-950 px-5 py-4 text-white shadow-xl sm:-left-6"><p className="text-xs font-semibold text-neutral-400">OUR APPROACH</p><p className="mt-1 font-display text-lg font-bold">Thoughtful by design</p></div></div></div></section>
+    <section className="bg-neutral-50"><div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-20"><div className="mx-auto max-w-2xl text-center"><span className="text-xs font-extrabold tracking-[.18em] text-vectra">WHAT GUIDES US</span><h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">The principles behind the work</h2><p className="mt-4 leading-7 text-neutral-600">Good outcomes start with listening, shared understanding and care in the details.</p></div><div className="mt-10 grid gap-5 md:grid-cols-3">{values.map(({icon:Icon,title,text})=><article key={title} className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"><span className="grid size-12 place-items-center rounded-xl bg-rose-50 text-vectra"><Icon size={23}/></span><h3 className="mt-5 font-display text-xl font-bold">{title}</h3><p className="mt-3 text-sm leading-7 text-neutral-600">{text}</p></article>)}</div></div></section>
+    <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 md:py-20 lg:grid-cols-2 lg:items-center"><div><span className="text-xs font-extrabold tracking-[.18em] text-vectra">HOW WE WORK</span><h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">A partner from first idea to launch</h2><p className="mt-4 leading-7 text-neutral-600">We work closely with you to understand the challenge, agree on the right scope, and build in clear stages. You stay informed and involved as the product takes shape.</p><Link to="/Contact" className="mt-6 inline-flex items-center gap-2 font-bold text-vectra hover:text-rose-800">Meet us at the start <MoveUpRight size={17}/></Link></div><div className="grid gap-3 sm:grid-cols-2">{principles.map(([Icon,title])=><div key={title} className="flex items-center gap-4 rounded-xl bg-neutral-50 p-5"><span className="grid size-10 shrink-0 place-items-center rounded-lg bg-white text-vectra shadow-sm"><Icon size={19}/></span><span className="font-semibold">{title}</span></div>)}</div></section>
+    <section className="relative isolate overflow-hidden bg-neutral-950 text-white"><img src={Background} alt="" className="absolute inset-0 -z-10 size-full object-cover opacity-20"/><div className="mx-auto flex max-w-7xl flex-col items-start gap-7 px-5 py-14 sm:px-8 md:flex-row md:items-center md:justify-between"><div><span className="text-xs font-bold tracking-[.18em] text-rose-300">LET’S BUILD TOGETHER</span><h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Make your next idea real.</h2><p className="mt-3 max-w-xl text-neutral-300">Let’s talk about what your business needs and where technology can help.</p></div><Link to="/Contact" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-vectra px-6 py-3.5 font-semibold text-white hover:bg-rose-700">Contact Vectra <ArrowRight size={17}/></Link></div></section>
+  </main><Footer/></>;
 }
